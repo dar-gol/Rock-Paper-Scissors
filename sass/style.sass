@@ -1,0 +1,260 @@
+*
+    margin: 0
+    padding: 0
+    body
+        height: 100vh  
+        font-family: Arial, Helvetica, sans-serif
+        overflow: hidden
+        background-color: aquamarine
+        .introduction
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            text-align: center
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+            width: 40vw
+            height: 30vh
+            background-color: whitesmoke
+            text-transform: uppercase
+            font-weight: bold
+            border-radius: 10px
+            box-shadow: 5px 5px 10px black
+            // display: none
+            #round
+                border-style: none
+                padding: 5px
+                background-color: #222
+                color: white
+                font-weight: bold
+            #begin
+                width: 100%
+                padding: 2vh 0
+                background-color: #222222
+                margin-bottom: 1vh
+                button
+                    padding: 7.5px
+                    background-color: crimson
+                    font-weight: bold
+                    transition: 0.2s
+                    letter-spacing: 1px
+                    cursor: pointer
+                    border-style: none
+                    text-transform: uppercase
+                    color: black
+                button:hover
+                    transform: scale(1.1)
+                    box-shadow: 0 0 0 5px white
+                    color: white
+            h1
+                margin: 2vh 0 0 0
+                color: black
+                letter-spacing: 2px
+            button:hover
+                transform: scale(1.05)
+        .game
+            width: 90%
+            height: 90%
+            position: relative
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            background-color: whitesmoke
+            box-shadow: 5px 5px 10px black
+            border-radius: 10px
+            display: flex
+            flex-direction: column
+            justify-content: space-around
+            align-items: center
+            .end
+                position: absolute
+                top: 0
+                left: 0
+                font-size: 30px
+                margin: 3vh 3vw
+                width: 40px
+                height: 40px
+                text-align: center
+                line-height: 40px
+                cursor: pointer
+                i
+                    color: crimson
+                    transition: .2s
+            .end:hover i
+                transform: scale(1.3)
+                color: #333
+            h2
+                border: 2px solid black
+                background-color: #fff
+                padding: 2vh
+                color: black
+                text-transform: uppercase
+            .weapon
+                display: flex
+                justify-content: center
+            .weapon img
+                width: 150px
+                margin: 20px
+                transition: .2s
+                cursor: pointer
+            .weapon img:hover
+                transform: scale(1.1)
+                box-shadow: 0 0 0 3px gold
+            .active
+                transform: scale(1.1)
+                box-shadow: 0 0 0 3px gold
+            .fight
+                width: 100%
+                display: flex
+                justify-content: center
+                padding: 3vh 0
+                background-color: #222222
+            button
+                border-style: none
+                font-size: 30px
+                font-weight: bold
+                background-color: crimson
+                padding: 3vh 3vw
+                transition: .2s
+                cursor: pointer
+            .fight button:hover
+                transform: scale(1.1)
+                box-shadow: 0 0 0 7px white
+                color: white
+            .result
+                display: flex
+                justify-content: space-between
+                width: 100%
+                font-weight: 700
+                h3
+                    padding: 3vh 0
+                .currentResult
+                    p:nth-of-type(1)
+                        color: green
+                    p:nth-of-type(2)
+                        color: red
+                    border: 2px solid black
+                    background-color: #fff
+                    padding: 3vh 3vw
+                    margin: 0 10vw
+                .info
+                    p:nth-of-type(1)
+                        color: green
+                    p:nth-of-type(2)
+                        color: red
+                    border: 2px solid black
+                    background-color: #fff
+                    padding: 3vh 3vw
+                    margin: 0 10vw
+        .battleground
+            width: 100%
+            height: 100%
+            background: radial-gradient(circle, rgba(255,0,0,1) 0%, aquamarine 90%)
+            .right, .left
+                position: absolute
+                width: 33vw
+            .vs
+                position: absolute
+                height: 100vh
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+            .right
+                top: 50%
+                left: 50%
+                transform: translate(50%, -50%)
+            .left
+                top: 50%
+                left: 50%
+                transform: translate(-150%, -50%)
+        .activeBattle
+            animation: showBattle 1s linear both
+            .activeVs
+                animation: attackVs 1s linear both 
+            .fail
+                animation: loser 2s linear both
+            .win
+                animation: bigWiner 2s linear both
+        
+@media(max-width: 1025px)
+    body
+        p
+            font-size: 12px
+        h3
+            font-size: 16px
+        h2
+            font-size: 20px
+            margin-top: 2vh
+        .introduction
+            width: 100%
+            button
+                padding: 20px
+        .game
+            .weapon img
+                width: 90px
+                margin: 1px
+            .end
+                margin: 0 0
+        .battleground
+            .vs
+                // display: none
+            .left
+                // display: none
+                top: 0
+                left: 50%
+                transform: translate(-50%,0)
+                width: 50vw
+                z-index: 1
+            .right
+                // display: none
+                top: auto
+                left: 50%
+                bottom: 0
+                width: 50vw
+                transform: translate(-50%,0)
+                z-index: 1
+        .activeBattle
+            animation: showBattle 1s linear
+            .activeVs
+                animation: attackVs 0.8s linear both
+            .fail
+                animation: loser 3s linear both
+            .win
+                animation: winer 3s linear both
+
+@keyframes showBattle 
+    0%
+        transform: scale(0)
+        border-radius: 80%
+        opacity: 0
+    33%
+        transform: scale(1)
+        border-radius: 0
+        opacity: 1
+    33.1%
+        filter: brightness(1000%)
+    80%
+        filter: brightness(100%)
+@keyframes loser
+    66%
+        opacity: 1
+    100%
+        opacity: 0
+@keyframes winer
+    66%
+        width: 50vw
+    100%
+        width: 100%
+@keyframes attackVs
+    100%
+        opacity: 0
+@keyframes bigWiner
+    100%
+        transform: translate(-50%, -50%)
+        
+
+
+
+

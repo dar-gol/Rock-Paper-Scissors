@@ -1,0 +1,473 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: aquamarine;
+}
+
+* body .introduction {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 40vw;
+  height: 30vh;
+  background-color: whitesmoke;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 10px;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+}
+
+* body .introduction #round {
+  border-style: none;
+  padding: 5px;
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+}
+
+* body .introduction #begin {
+  width: 100%;
+  padding: 2vh 0;
+  background-color: #222222;
+  margin-bottom: 1vh;
+}
+
+* body .introduction #begin button {
+  padding: 7.5px;
+  background-color: crimson;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-style: none;
+  text-transform: uppercase;
+  color: black;
+}
+
+* body .introduction #begin button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 0 5px white;
+          box-shadow: 0 0 0 5px white;
+  color: white;
+}
+
+* body .introduction h1 {
+  margin: 2vh 0 0 0;
+  color: black;
+  letter-spacing: 2px;
+}
+
+* body .introduction button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+* body .game {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: whitesmoke;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body .game .end {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 30px;
+  margin: 3vh 3vw;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+* body .game .end i {
+  color: crimson;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+* body .game .end:hover i {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  color: #333;
+}
+
+* body .game h2 {
+  border: 2px solid black;
+  background-color: #fff;
+  padding: 2vh;
+  color: black;
+  text-transform: uppercase;
+}
+
+* body .game .weapon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body .game .weapon img {
+  width: 150px;
+  margin: 20px;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+* body .game .weapon img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 0 3px gold;
+          box-shadow: 0 0 0 3px gold;
+}
+
+* body .game .active {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 0 3px gold;
+          box-shadow: 0 0 0 3px gold;
+}
+
+* body .game .fight {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3vh 0;
+  background-color: #222222;
+}
+
+* body .game button {
+  border-style: none;
+  font-size: 30px;
+  font-weight: bold;
+  background-color: crimson;
+  padding: 3vh 3vw;
+  -webkit-transition: .2s;
+  transition: .2s;
+  cursor: pointer;
+}
+
+* body .game .fight button:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 0 7px white;
+          box-shadow: 0 0 0 7px white;
+  color: white;
+}
+
+* body .game .result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  font-weight: 700;
+}
+
+* body .game .result h3 {
+  padding: 3vh 0;
+}
+
+* body .game .result .currentResult {
+  border: 2px solid black;
+  background-color: #fff;
+  padding: 3vh 3vw;
+  margin: 0 10vw;
+}
+
+* body .game .result .currentResult p:nth-of-type(1) {
+  color: green;
+}
+
+* body .game .result .currentResult p:nth-of-type(2) {
+  color: red;
+}
+
+* body .game .result .info {
+  border: 2px solid black;
+  background-color: #fff;
+  padding: 3vh 3vw;
+  margin: 0 10vw;
+}
+
+* body .game .result .info p:nth-of-type(1) {
+  color: green;
+}
+
+* body .game .result .info p:nth-of-type(2) {
+  color: red;
+}
+
+* body .battleground {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, red 0%, aquamarine 90%);
+}
+
+* body .battleground .right, * body .battleground .left {
+  position: absolute;
+  width: 33vw;
+}
+
+* body .battleground .vs {
+  position: absolute;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+* body .battleground .right {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+}
+
+* body .battleground .left {
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-150%, -50%);
+          transform: translate(-150%, -50%);
+}
+
+* body .activeBattle {
+  -webkit-animation: showBattle 1s linear both;
+          animation: showBattle 1s linear both;
+}
+
+* body .activeBattle .activeVs {
+  -webkit-animation: attackVs 1s linear both;
+          animation: attackVs 1s linear both;
+}
+
+* body .activeBattle .fail {
+  -webkit-animation: loser 2s linear both;
+          animation: loser 2s linear both;
+}
+
+* body .activeBattle .win {
+  -webkit-animation: bigWiner 2s linear both;
+          animation: bigWiner 2s linear both;
+}
+
+@media (max-width: 1025px) {
+  body p {
+    font-size: 12px;
+  }
+  body h3 {
+    font-size: 16px;
+  }
+  body h2 {
+    font-size: 20px;
+    margin-top: 2vh;
+  }
+  body .introduction {
+    width: 100%;
+  }
+  body .introduction button {
+    padding: 20px;
+  }
+  body .game .weapon img {
+    width: 90px;
+    margin: 1px;
+  }
+  body .game .end {
+    margin: 0 0;
+  }
+  body .battleground .left {
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 50vw;
+    z-index: 1;
+  }
+  body .battleground .right {
+    top: auto;
+    left: 50%;
+    bottom: 0;
+    width: 50vw;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    z-index: 1;
+  }
+  body .activeBattle {
+    -webkit-animation: showBattle 1s linear;
+            animation: showBattle 1s linear;
+  }
+  body .activeBattle .activeVs {
+    -webkit-animation: attackVs 0.8s linear both;
+            animation: attackVs 0.8s linear both;
+  }
+  body .activeBattle .fail {
+    -webkit-animation: loser 3s linear both;
+            animation: loser 3s linear both;
+  }
+  body .activeBattle .win {
+    -webkit-animation: winer 3s linear both;
+            animation: winer 3s linear both;
+  }
+}
+
+@-webkit-keyframes showBattle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    border-radius: 80%;
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 0;
+    opacity: 1;
+  }
+  33.1% {
+    -webkit-filter: brightness(1000%);
+            filter: brightness(1000%);
+  }
+  80% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@keyframes showBattle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    border-radius: 80%;
+    opacity: 0;
+  }
+  33% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    border-radius: 0;
+    opacity: 1;
+  }
+  33.1% {
+    -webkit-filter: brightness(1000%);
+            filter: brightness(1000%);
+  }
+  80% {
+    -webkit-filter: brightness(100%);
+            filter: brightness(100%);
+  }
+}
+
+@-webkit-keyframes loser {
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes loser {
+  66% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes winer {
+  66% {
+    width: 50vw;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes winer {
+  66% {
+    width: 50vw;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes attackVs {
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes attackVs {
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes bigWiner {
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes bigWiner {
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+/*# sourceMappingURL=style.css.map */

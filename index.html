@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papier, kamień, nożyce</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"
+        integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="introduction">
+        <h1>Papier, kamień, nożyce</h1>
+        <div>
+            <label for="round">Ilość rund: </label>
+            <input type="number" id="round">
+        </div>
+        <div id="begin">
+            <button>Zaczynamy!</button>
+        </div>
+    </div>
+    <div class="game">
+        <div class="end"><i class="fas fa-times"></i></div>
+        <h2>Wybierz swoją broń: </h2>
+        <div class="weapon">
+            <img data-option="0" src="img/paper.jpg">
+            <img data-option="1" src="img/rock.jpg">
+            <img data-option="2" src="img/scissors.jpg">
+        </div>
+        <div class="fight">
+            <button>Walcz!</button>
+        </div>
+        <div class="result">
+            <div class="currentResult">
+                <h3>Informacje:</h2>
+                    <p>Twój wybór: <span class="your">-</span></p>
+                    <p>Poprzedni wybór przeciwnika: <span class="ai">-</span></p>
+            </div>
+            <div class="info">
+                <h3>Wyniki:</h3>
+                <p>Wygrane mecze: <span class="win"></span></p>
+                <p>Przegrane mecze: <span class="failures"></span></p>
+                <p>Ilosc rund: <span class="count"></span></p>
+            </div>
+        </div>
+    </div>
+    <div class="battleground activeBattle">
+        <img src="img/paper.png" alt="prawo" class="right">
+        <img src="img/rock.png" alt="lewo" class="left">
+        <img src="img/vs.png" alt="Versus" class="vs activeVs">
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
